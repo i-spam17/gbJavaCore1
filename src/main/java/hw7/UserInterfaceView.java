@@ -10,17 +10,20 @@ public class UserInterfaceView {
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
-            System.out.println("Введите название города: ");
-            String city = scanner.nextLine();
+            System.out.println("Введите название города на англ языке: ");
+            while (scanner.hasNext("[^a-zA-z]+")) {
+                System.out.println("допустим ввод только латинских символов");
+                scanner.next();
+            }
+            String city = scanner.next();
 
             System.out.println("Введите \"1\" для получения погоды на сегодня;" +
                     "Введите \"5\" для прогноза на 5 дней; Для выхода введите \"0\":");
-            String command = scanner.nextLine();
-//            if (command.equals("1") || command.equals("5") || command.equals("0")) {
-//                command = scanner.nextLine();
-//            } else {
-//                System.out.println("Введите число: \"1\", или  \"5\", или \"0\". Другие данные не допустимы!");
-//            }
+            while (!scanner.hasNext("[150]")) {
+                System.out.println("Другие данные не допустимы!");
+                scanner.next();
+            }
+            String command = scanner.next();
 
             //TODO* Сделать метод валидации пользовательского ввода
 
@@ -31,6 +34,7 @@ public class UserInterfaceView {
             } catch (IOException e) {
                 e.printStackTrace();
             }
+            break;
         }
     }
 }

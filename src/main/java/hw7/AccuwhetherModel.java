@@ -83,8 +83,7 @@ public class AccuwhetherModel implements WeatherModel {
                 Response fiveDayForecastResponse = okHttpClient.newCall(request1).execute();
                 String weatherFiveDayResponse = fiveDayForecastResponse.body().string();
                 System.out.println("Город - " + getCityKey(selectedCity)[1]);
-//                responseParse.parseWeatherFiveDay(weatherFiveDayResponse);
-                System.out.println("метод будет доделан позже....((");
+                responseParse.parseWeatherFiveDay(weatherFiveDayResponse, period);
                 break;
             default:
                 throw new IllegalArgumentException("Прогноз погоды может быть только на 1день или на 5дней. " +
