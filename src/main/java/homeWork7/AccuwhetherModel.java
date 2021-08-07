@@ -1,4 +1,4 @@
-package hw7;
+package homeWork7;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import okhttp3.HttpUrl;

@@ -1,4 +1,4 @@
-package hw7;
+package homeWork7;
 
 import java.io.IOException;
 import java.util.HashMap;

@@ -1,13 +1,9 @@
-package hw7;
+package homeWork7;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
-import static hw7.Period.FIVE_DAYS;
-import static hw7.Period.NOW;
-import static hw7.AccuwhetherModel.objectMapper;
+import static homeWork7.AccuwhetherModel.objectMapper;
 
 public class ResponseParse {
     public void parseWeatherResponse(String weatherResponse) throws IOException {
